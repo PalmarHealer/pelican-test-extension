@@ -14,7 +14,7 @@
         },
         {
             "name": "example.blade.php",
-            "type": "View"
+            "type": "Views"
         }
     ],
     "permission": [

@@ -1,42 +1,37 @@
 {
-  "name": "Test",
-  "slug": "test",
-  "author": "PalmarHealer",
-  "image_url": "https://palmarhealer.profile.nauren.de/profile_edges.png",
-  "description": "Test Description",
-  "source_url": "example_source_code_link",
-  "donation_url": "example_donation_link",
-  "download_url": "example_file_download_link",
-  "files": [
-    {
-      "name": "example_file_name",
-      "type": "example_type"
-    },
-    {
-      "name": "example_file_name",
-      "type": "example_type"
-    }
-  ],
-  "permission": [
-    {
-      "position": 0,
-      "name": "Test",
-      "icon": "tabler-terminal-2",
-      "icon_comment": "https://tabler.io/icons",
-      "label": "test",
-      "description": "example_description",
-      "options": [
+    "name": "Test",
+    "slug": "test",
+    "author": "PalmarHealer",
+    "image_url": "https://gravatar.com/avatar/ec4dd641d04d8cbf12eb5847748045fd",
+    "description": "Test Description",
+    "source_url": "example_source_code_link",
+    "donation_url": "example_donation_link",
+    "download_url": "example_file_download_link",
+    "files": [
         {
-          "name": "example_name",
-          "label": "read",
-          "description": "example_description"
+            "name": "Example.php",
+            "type": "Page"
         },
         {
-          "name": "example_name",
-          "label": "write",
-          "description": "example_description"
+            "name": "example.blade.php",
+            "type": "View"
         }
-      ]
-    }
-  ]
+    ],
+    "permission": [
+        {
+            "position": 0,
+            "name": "Test",
+            "icon": "tabler-terminal-2",
+            "icon_comment": "https:\/\/tabler.io\/icons",
+            "label": "example",
+            "description": "Example extension description",
+            "options": [
+                {
+                    "name": "Read",
+                    "label": "read",
+                    "description": "You can read with this permission"
+                }
+            ]
+        }
+    ]
 }

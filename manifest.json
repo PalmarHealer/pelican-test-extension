@@ -1,0 +1,42 @@
+{
+  "name": "Test",
+  "slug": "test",
+  "author": "PalmarHealer",
+  "image_url": "https://palmarhealer.profile.nauren.de/profile_edges.png",
+  "description": "Test Description",
+  "source_url": "https://www.g-portal.com/eur/server/ark-se/7844296/configFiles",
+  "donation_url": "example_donation_link",
+  "download_url": "example_file_download_link",
+  "files": [
+    {
+      "name": "example_file_name",
+      "type": "example_type"
+    },
+    {
+      "name": "example_file_name",
+      "type": "example_type"
+    }
+  ],
+  "permission": [
+    {
+      "position": 0,
+      "name": "Test",
+      "icon": "tabler-terminal-2",
+      "icon_comment": "https://tabler.io/icons",
+      "label": "test",
+      "description": "example_description",
+      "options": [
+        {
+          "name": "example_name",
+          "label": "read",
+          "description": "example_description"
+        },
+        {
+          "name": "example_name",
+          "label": "write",
+          "description": "example_description"
+        }
+      ]
+    }
+  ]
+}

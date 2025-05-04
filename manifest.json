@@ -1,6 +1,6 @@
 {
-    "name": "Test",
-    "slug": "test",
+    "name": "Example Extension",
+    "slug": "example-extension",
     "author": "PalmarHealer",
     "image_url": "https://gravatar.com/avatar/ec4dd641d04d8cbf12eb5847748045fd",
     "description": "Test Description",

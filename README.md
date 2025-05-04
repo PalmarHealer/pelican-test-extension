@@ -52,7 +52,7 @@ The extension defines the following permission group:
 
 1.  Go to your pelican and navigate in the admin panel to extensions
     
-2.  Click on "Install new Extension"
+2.  Click on "Install new Extension" and enter this repositories url (you can also use .zip file links)
     
 3.  A preview should appear of this extensions. 
     

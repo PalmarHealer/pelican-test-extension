@@ -6,7 +6,6 @@
   "description": "Test Description",
   "source_url": "example_source_code_link",
   "donation_url": "example_donation_link",
-  "download_url": "example_file_download_link",
   "files": [
     {
       "name": "example_file_name",

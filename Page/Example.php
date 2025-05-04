@@ -3,8 +3,10 @@
 namespace App\Filament\Server\Extensions;
 
 use App\Models\Server;
+use Extensions\helper\extensionHelper;
 use Filament\Facades\Filament;
 use Filament\Pages\Page;
+use Filament\Actions\Action;
 
 
 class Example extends Page
@@ -13,16 +15,11 @@ class Example extends Page
 
     protected static ?string $title = 'Example';
 
-    protected static ?string $navigationIcon = 'heroicon-o-beaker';
+    protected static ?string $navigationIcon = 'tabler-ruler';
 
     protected static ?int $navigationSort = 10;
 
     protected static string $view = 'filament.extensions.example-page';
-
-    public function getTitle(): string
-    {
-        return 'Example Override';
-    }
 
     public static function canAccess(): bool
     {
@@ -32,20 +29,41 @@ class Example extends Page
         return parent::canAccess()
             && auth()->user()->can('example.read', $server)
             && $server->isInstalled()
-            && !$server->isSuspended();
+            && !$server->isSuspended()
+            && extensionHelper::checkExtensionEgg("example-extension", $server->egg['id']);
 
     }
 
+    public function getTitle(): string
+    {
+        return 'Custom Title';
+    }
+
+    public function getHeaderActions(): array
+    {
+        return [
+            Action::make('Filament Docs')
+                ->url('https://filamentphp.com/docs')
+                ->openUrlInNewTab()
+                ->icon('heroicon-m-book-open')
+                ->color('info'),
+            Action::make('What types can I use in my blade file')
+                ->url('https://filamentphp.com/docs/3.x/support/blade-components/overview')
+                ->openUrlInNewTab()
+                ->icon('heroicon-m-book-open'),
+        ];
+    }
+
     public string $string = "";
+    public int $amount = 0;
 
     public function mount(): void
     {
-        abort_unless(auth()->user()->can('example.read', Filament::getTenant()), 403);
-        /** @var Server $server */
-        $server = Filament::getTenant();
-        abort_if(!$server->isInstalled() OR $server->isSuspended(), 403);
+        $this->string = "String set dynamically";
+    }
 
-        $this->string = "test string";
-
+    public function exampleCalculate(int $amount): void
+    {
+        $this->amount = $this->amount + $amount;
     }
 }
